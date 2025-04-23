@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profesi SMK Teknik Farmasi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fbff;
+      color: #222;
+    }
+
+    .profesi-section {
+      padding: 80px 20px;
+      background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+    }
+
+    .profesi-section h2 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    .profesi-section p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .profesi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 10px 20px rgba(13, 71, 161, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(13, 71, 161, 0.2);
+    }
+
+    .icon {
+      font-size: 45px;
+      color: #1565c0;
+      margin-bottom: 15px;
+      display: inline-block;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover .icon {
+        animation: wiggle 0.6s ease-in-out infinite;
+      }
+  
+      @keyframes wiggle {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(10deg); }
+        50% { transform: rotate(-10deg); }
+        75% { transform: rotate(5deg); }
+      }
+      
+      
+
+    .card h3 {
+      font-size: 1.2em;
+      color: #0d47a1;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.5;
+    }
+
+
+     .team-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  .team-section h2 {
+    font-size: 2.5em;
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+
+  .team-section .subtitle {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    color: #607d8b;
+    font-size: 1rem;
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .team-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #e3f2fd;
+  }
+
+  .team-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #0d47a1;
+    transition: transform 0.3s ease;
+  }
+
+  .team-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .card-content h3 {
+    font-size: 1.2em;
+    color: #0d47a1;
+    margin-bottom: 5px;
+  }
+
+  .card-content span {
+    display: block;
+    font-size: 0.95em;
+    color: #607d8b;
+    margin-bottom: 12px;
+  }
+
+  .card-content p {
+    font-size: 0.9em;
+    color: #455a64;
+    line-height: 1.5;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .team-section h2 {
+      font-size: 2em;
+    }
+
+    .team-card img {
+      height: 150px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<section class="profesi-section">
+  <h2>Profesi Lulusan Teknik Farmasi</h2>
+  <p>
+    Lulusan SMK Teknik Farmasi memiliki keterampilan yang dapat diterapkan di berbagai bidang farmasi, laboratorium, dan industri kesehatan.
+  </p>
+
+  <div class="profesi-grid">
+    <div class="card">
+      <div class="icon">💊</div>
+      <h3>Asisten Apoteker</h3>
+      <p>Membantu dalam peracikan dan penyediaan obat serta pelayanan di apotek atau rumah sakit.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧪</div>
+      <h3>Teknisi Laboratorium</h3>
+      <p>Melaksanakan uji dan pemeriksaan di laboratorium kesehatan dan farmasi.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏭</div>
+      <h3>Operator Produksi Farmasi</h3>
+      <p>Bertugas dalam proses pembuatan obat dan produk kesehatan di industri farmasi.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔬</div>
+      <h3>Staf Quality Control</h3>
+      <p>Memastikan kualitas dan keamanan produk farmasi sesuai standar.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📦</div>
+      <h3>Staff Gudang Obat</h3>
+      <p>Mengelola penyimpanan, stok, dan distribusi obat sesuai prosedur kesehatan.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🧾</div>
+      <h3>Sales Produk Farmasi</h3>
+      <p>Memasarkan produk farmasi ke rumah sakit, klinik, dan apotek secara profesional.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👨‍⚕️</div>
+      <h3>Petugas Klinik</h3>
+      <p>Membantu tenaga medis di fasilitas layanan kesehatan dengan tugas teknis dan administratif.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Melanjutkan Kuliah</h3>
+      <p>Bisa melanjutkan pendidikan ke D3 atau S1 Farmasi, Analis Kesehatan, atau Teknologi Pangan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+    <h2>Meet Our Team</h2>
+    <p class="subtitle">Kami adalah tim yang berdedikasi untuk menciptakan solusi terbaik di dunia farmasi.</p>
+  
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://i.pravatar.cc/150?img=3" alt="Anggota 1" />
+        <div class="card-content">
+          <h3>Rina Amalia</h3>
+          <span>UI/UX Designer</span>
+          <p>Rina menciptakan antarmuka yang intuitif dan menarik agar pengguna dapat merasakan pengalaman yang optimal.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://i.pravatar.cc/150?img=5" alt="Anggota 2" />
+        <div class="card-content">
+          <h3>Fikri Albar</h3>
+          <span>Frontend Developer</span>
+          <p>Fikri bertanggung jawab membangun tampilan depan yang responsif dan dinamis menggunakan teknologi web modern.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Anggota 3" />
+        <div class="card-content">
+          <h3>Salma Widya</h3>
+          <span>Backend Developer</span>
+          <p>Salma mengelola server dan database yang memastikan aplikasi berjalan dengan lancar dan aman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

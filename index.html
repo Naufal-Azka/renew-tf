@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknologi Farmasi</title>
+    <link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <style>
+        .special-gothic-regular {
+            font-family: "Special Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .skill {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .skill::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, #00acc1, transparent);
+            transform: skewX(-20deg);
+            transition: left 0.5s ease;
+            z-index: 0;
+        }
+        .skill:hover::before {
+            left: 100%;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 172, 193, 0.4);
+        }
+        .skill:active {
+            animation: clickPulse 0.7s ease-out;
+        }
+        .transition-transform-boxShadow-ease {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .popIn-ease-forwards {
+            animation: popIn 0.8s ease forwards;
+        }
+        .fadeIn-easeIn {
+            animation: fadeIn 1s ease-in;
+        }
+        .card:hover .icon {
+            animation: wiggle 0.6s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(-10deg); }
+            75% { transform: rotate(5deg); }
+        }
+        @keyframes clickPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 rgba(0, 172, 193, 0.7); }
+            50% { transform: scale(0.96); box-shadow: 0 0 20px rgba(0, 172, 193, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 12px 30px rgba(0, 172, 193, 0.3); }
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes popIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="special-gothic-regular" >
+    <nav class="top-0 fixed bg-white w-full">
+        <div class="border-b-1 border-gray-300 flex place-items-center justify-center py-2 gap-2">
+            <img src="src/logo-tf.png" alt="" loading="lazy" class="w-1/10 rounded-full border-1 border-gray-400">
+            <p>Teknologi Farmasi</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); ">
+                <path d="m11.998 17 7-8h-14z"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <section class="mx-6 place-items-center grid grid-cols-1 gap-8 mt-20">
+        <img src="src/logo-tf.png" alt="logo-tf" loading="lazy" class="max-w-1/2 rounded-full border-1 border-gray-400 shadow-lg shadow-gray-500/10">
+        <p class="text-justify text-[15px]">
+            <span class="font-bold">Teknologi Farmasi</span> 
+            merupakan salah satu jurusan di SMK Negeri 1 Purwokerto yang mempelajari berbagai hal seputar obat-obatan dan dunia farmasi. Di jurusan ini, siswa dibekali pengetahuan tentang farmakologi, serta kimia farmasi. Selain teori, siswa juga diajarkan keterampilan dalam meracik, mengemas, dan menyimpan obat sesuai standar yang berlaku. Jurusan ini cocok untuk kamu yang tertarik di bidang kesehatan dan ingin berkontribusi dalam dunia pengobatan.
+        </p>
+        <img src="src/home.jpg" alt="home" loading="lazy" class="rounded-2xl">
+    </section>
+    <section class="grid grid-cols-1 gap-6 mx-6 mt-20 md:grid-cols-4">
+        <p>Skills</p>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-dna text-[2rem] text-[#00acc1]"></i> Farmakologi
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Memahami mekanisme kerja obat, efek samping, dan interaksi antar obat.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-vial text-[2rem] text-[#00acc1]"></i> Teknologi Farmasi Dasar
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Teknik pembuatan, pengemasan, dan penyimpanan obat.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-leaf text-[2rem] text-[#00acc1]"></i> Farmakognosi
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Mengenal dan menganalisis obat alami dari tanaman.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-balance-scale text-[2rem] text-[#00acc1]"></i> Regulasi & Hukum Kesehatan
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Mempelajari aturan hukum dalam distribusi obat & pelayanan.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-user-nurse text-[2rem] text-[#00acc1]"></i> Pelayanan Farmasi
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Memberikan layanan dan informasi obat kepada pasien.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-flask text-[2rem] text-[#00acc1]"></i> Kimia Farmasi
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Mempelajari struktur, sifat kimia, dan sintesis obat.</p>
+        </div>
+        <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
+            <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
+                <i class="fas fa-lightbulb text-[2rem] text-[#00acc1]"></i> Kewirausahaan & Produk Kreatif
+            </div>
+            <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Mengembangkan produk farmasi inovatif secara mandiri.</p>
+        </div>
+    </section>
+    <section class="mx-6 bg-gradient-to-br from-[#e3f2fd] to-[#ffffff]"></section>
+        <h2 class="text-center text-[2.8em] text-[#0d47a1] mb-2.5">Profesi Lulusan Teknik Farmasi</h2>
+        <p class="text-center max-w-[700px] mx-auto mb-[50px] text-[#555] text-[1rem]">Lulusan SMK Teknik Farmasi memiliki keterampilan yang dapat diterapkan di berbagai bidang farmasi, laboratorium, dan industri kesehatan.</p>
+  
+        <div class="grid grid-cols-1 gap-7">
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">💊</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Asisten Apoteker</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Membantu dalam peracikan dan penyediaan obat serta pelayanan di apotek atau rumah sakit.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">🧪</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Teknisi Laboratorium</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Melaksanakan uji dan pemeriksaan di laboratorium kesehatan dan farmasi.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">🏭</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Operator Produksi Farmasi</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Bertugas dalam proses pembuatan obat dan produk kesehatan di industri farmasi.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">🔬</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Staf Quality Control</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Memastikan kualitas dan keamanan produk farmasi sesuai standar.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">📦</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Staff Gudang Obat</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Mengelola penyimpanan, stok, dan distribusi obat sesuai prosedur kesehatan.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">🧾</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Sales Produk Farmasi</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Memasarkan produk farmasi ke rumah sakit, klinik, dan apotek secara profesional.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">👨‍⚕️</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Petugas Klinik</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Membantu tenaga medis di fasilitas layanan kesehatan dengan tugas teknis dan administratif.</p>
+            </div>
+            <div class="card bg-white rounded-[20px] py-[30px] px-[20px] shadow-[0_10px_20px_rgba(13,71,161,0.1)] transition-transform-boxShadow-ease text-center hover:shadow-[0_15px_30px_rgba(13,71,161,0.2)] hover:transform hover:translate-y-[-10px]">
+                <div class="icon text-[45px] text-[#1565c0] mb-4 inline-block transition-transform-boxShadow-ease">📚</div>
+                <h3 class="text-[1.2em] text-[#0d47a1] mb-2">Melanjutkan Kuliah</h3>
+                <p class="text-[1em] text-[#444] tracking-wide">Bisa melanjutkan pendidikan ke D3 atau S1 Farmasi, Analis Kesehatan, atau Teknologi Pangan.</p>
+            </div>
+        </div>
+    </section>
+    <section class="mx-6 place-items-center grid grid-cols-1 gap-8 mt-20 md:grid-cols-3">
+        <p>Program</p>
+        <div class="bg-white py-5 px-6 rounded-[12px] shadow-[0_4px_16px_rgba(0,96,100,0.15)] transition-transform-boxShadow-ease text-center hover:shadow-[0_10px_25px_rgba(0,172,193,0.3)] hover:scale-[1.02]">
+            <h3 class="text-[#004d40] mb-2.5 text-[1.5rem]">Pendidikan Teknologi Farmasi</h3>
+            <p class="text-[#555] text-[1rem] tracking-wide">Mempelajari obat-obatan serta manajemen dan pemasaran obat.</p>
+        </div>
+        <div class="bg-white py-5 px-6 rounded-[12px] shadow-[0_4px_16px_rgba(0,96,100,0.15)] transition-transform-boxShadow-ease text-center hover:shadow-[0_10px_25px_rgba(0,172,193,0.3)] hover:scale-[1.02]">
+            <h3 class="text-[#004d40] mb-2.5 text-[1.5rem]">Kurikulum Merdeka</h3>
+            <p class="text-[#555] text-[1rem] tracking-wide">Pembelajaran intrakurikuler yang beragam dimana konten akan lebih optimal.</p>
+        </div>
+        <div class="bg-white py-5 px-6 rounded-[12px] shadow-[0_4px_16px_rgba(0,96,100,0.15)] transition-transform-boxShadow-ease text-center hover:shadow-[0_10px_25px_rgba(0,172,193,0.3)] hover:scale-[1.02]">
+            <h3 class="text-[#004d40] mb-2.5 text-[1.5rem]">Bimbingan Terpantau</h3>
+            <p class="text-[#555] text-[1rem] tracking-wide">Guru dan pembimbing terlatih yang memonitori siswa.</p>
+        </div>
+    </section>
+    <section class="mx-6 grid grid-cols-1 gap-8 mt-20">
+        <p>Prestasi</p>
+        <div class="border-1 border-gray-500 rounded-2xl shadow-[0_6px_20px_rgba(0,0,0,0.1)]">
+            <img src="src/data-dummy-photo-profile.jpg" alt="" loading="lazy" class="w-full h-[250px] object-cover border-b-2 border-gray-400 rounded-t-2xl">
+            <p class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ad!</p>
+        </div>
+        <div class="border-1 border-gray-500 rounded-2xl shadow-[0_6px_20px_rgba(0,0,0,0.1)]">
+            <img src="src/data-dummy-photo-profile.jpg" alt="" loading="lazy" class="w-full h-[250px] object-cover border-b-2 border-gray-400 rounded-t-2xl">
+            <p class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, ad!</p>
+        </div>
+    </section>
+    <section class="mx-6 place-items-center grid grid-cols-1 gap-4 mt-20">
+        <p>Guru</p>
+        <div class="grid grid-cols-1 gap-3 border-1 border-gray-500 rounded-2xl px-7 py-5 shadow-[0_6px_20px_rgba(0,0,0,0.1)]">
+            <img src="src/data-dummy-photo-profile.jpg" alt="" loading="lazy" class="max-w-[80%] rounded border-2 border-gray-400 justify-self-center">
+            <div class="grid grid-cols-1">
+                <p class="font-bold tracking-wide">Naufal Azka Putra Difa S.kom</p>
+                <p class="tracking-wider">NIP: 93723576 186358 2 124</p>
+                <p class="justify-self-center font-semibold text-lg my-3">"Lorem Ipsum dolor sit amet"</p>
+                <hr>
+                <a href="" class="flex flex-row mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                        <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
+                    </svg>
+                    <p class="underline">@naufal_azka74</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p>Galeri Besok</p>
+    </section>
+    <section class="mx-6 text-center">
+        <h2 class="text-[2.5rem] text-[#0d47a1] mb-2.5">Meet Our Team</h2>
+        <p class="max-w-[700px] text-[#607d8b] text-[1rem] mx-auto mb-10">Kami adalah tim yang berdedikasi untuk menciptakan solusi terbaik di dunia farmasi.</p>
+      
+        <div class="grid grid-cols-1 gap-7 md:grid-cols-5">
+            <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
+                <img src="https://i.pravatar.cc/150?img=3" alt="Anggota 1" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]"/>
+                <div class="p-5 text-center">
+                    <h3 class="text-[1.3rem] text-[#0d47a1] mb-1">Rina Amalia</h3>
+                    <span class="block text-[1rem] text-[#607d8b] mb-3">UI/UX Designer</span>
+                    <p class="text-[1em] text-[#455a64] tracking-wide">Rina menciptakan antarmuka yang intuitif dan menarik agar pengguna dapat merasakan pengalaman yang optimal.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Anggota 2" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]" />
+                <div class="p-5 text-center">
+                    <h3 class="text-[1.3rem] text-[#0d47a1] mb-1">Fikri Albar</h3>
+                    <span class="block text-[1rem] text-[#607d8b] mb-3">Frontend Developer</span>
+                    <p class="text-[1em] text-[#455a64] tracking-wide">Fikri bertanggung jawab membangun tampilan depan yang responsif dan dinamis menggunakan teknologi web modern.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Anggota 3" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]" />
+                <div class="p-5 text-center">
+                    <h3 class="text-[1.3rem] text-[#0d47a1] mb-1">Salma Widya</h3>
+                    <span class="block text-[1rem] text-[#607d8b] mb-3">Backend Developer</span>
+                    <p class="text-[1em] text-[#455a64] tracking-wide">Salma mengelola server dan database yang memastikan aplikasi berjalan dengan lancar dan aman.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Anggota 3" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]" />
+                <div class="p-5 text-center">
+                    <h3 class="text-[1.3rem] text-[#0d47a1] mb-1">Salma Widya</h3>
+                    <span class="block text-[1rem] text-[#607d8b] mb-3">Backend Developer</span>
+                    <p class="text-[1em] text-[#455a64] tracking-wide">Salma mengelola server dan database yang memastikan aplikasi berjalan dengan lancar dan aman.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Anggota 3" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]" />
+                <div class="p-5 text-center">
+                    <h3 class="text-[1.3rem] text-[#0d47a1] mb-1">Salma Widya</h3>
+                    <span class="block text-[1rem] text-[#607d8b] mb-3">Backend Developer</span>
+                    <p class="text-[1em] text-[#455a64] tracking-wide">Salma mengelola server dan database yang memastikan aplikasi berjalan dengan lancar dan aman.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    <script src="index.js"></script>
+</body>
+</html>
