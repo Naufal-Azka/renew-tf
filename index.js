@@ -22,6 +22,11 @@ const changeNavbarOnScroll = () => {
 
 document.addEventListener("scroll", changeNavbarOnScroll);
 
+const navbarList = document.getElementById("navbar-list");
+navbarItem.addEventListener('click', () => {
+    
+})
+
 const data = {
     datasets: [{
         data: [15, 21, 14, 8, 12, 18, 12],
@@ -69,3 +74,4 @@ const myChart = new Chart(
     document.getElementById('donutChart'),
     config
 );
+
