@@ -23,9 +23,28 @@ const changeNavbarOnScroll = () => {
 document.addEventListener("scroll", changeNavbarOnScroll);
 
 const navbarList = document.getElementById("navbar-list");
+let isNavOpen = false;
+
+// Toggle navbar list
 navbarItem.addEventListener('click', () => {
-    
-})
+    isNavOpen = !isNavOpen;
+    if (isNavOpen) {
+        navbarList.classList.add('active');
+        document.body.classList.add('overflow-hidden');
+    } else {
+        navbarList.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+    }
+});
+
+// Close navbar when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navbarList.contains(e.target) && !navbarItem.contains(e.target)) {
+        navbarList.classList.remove('active');
+        document.body.classList.remove('overflow-hidden');
+        isNavOpen = false;
+    }
+});
 
 const data = {
     datasets: [{

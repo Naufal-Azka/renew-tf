@@ -116,6 +116,19 @@
                 background-position: center;
                 background-blend-mode: overlay;
             }
+            .navbar-list {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                z-index: 50;
+                transition: top 0.3s ease-in-out;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .navbar-list.active {
+                top: 0;
+            }
         }
     </style>
 </head>
@@ -128,7 +141,7 @@
                 <path d="m11.998 17 7-8h-14z"></path>
             </svg>
         </div>
-        <div id="navbar-list" class="absolute -top-full"></div>
+        <div id="navbar-list" class="navbar-list">
             <div class="border-gray-400 border-b-1 border-gray-400 flex place-items-center justify-center py-2 gap-2">
                 <p>Home</p>
             </div>
@@ -518,7 +531,7 @@
         </div>
     </section>
     <section class="mx-6 grid grid-cols-2 gap-4">
-        <div class=" overflow-hidden">
+        <div class="overflow-hidden">
             <img src="src/data-dummy-photo-profile.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
         </div>
         <div class="overflow-hidden">
