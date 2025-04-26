@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
     <!-- ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- CHART -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     
     <style>
         .special-gothic-regular {
@@ -112,7 +114,7 @@
         }
     </style>
 </head>
-<body class="special-gothic-regular" >
+<body class="special-gothic-regular">
     <nav class="top-0 fixed backdrop-blur-base bg-white/20 w-full z-100" id="navbar">
         <div class="border-gray-400 flex place-items-center justify-center py-2 gap-2" id="navbar-item">
             <img src="src/logo-tf.png" alt="" loading="lazy" class="w-1/10 rounded-full border-1 border-gray-400">
@@ -122,7 +124,7 @@
             </svg>
         </div>
     </nav>
-
+    <!-- LANDING PAGE -->
     <section class="home w-full rounded-b-[24px] flex flex-col-reverse p-4 pb-10 gap-3">
         <div class="flex flex-row justify-center place-items-center gap-2 px-4 py-2 top-[90%] left-[3%] border-1 border-gray-300 bg-white rounded-full max-w-[10rem]">
             <p>Learn More</p>
@@ -131,7 +133,7 @@
             </svg>
         </div>
         <p class="text-white text-[30px] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        <div class="flex flex-row backdrop-blur-sm bg-white/60 rounded-full gap-2 px-4 py-2 place-items-center max-w-fit">
+        <div class="flex flex-row backdrop-blur-sm bg-white/60 rounded-full gap-2 px-4 py-2 place-items-center max-w-fit" data-aos="fade-right">
             <div class="relative flex place-items-center">
                 <img src="src/data-dummy-photo-profile.jpg" alt="" class="rounded-full border-1 border-gray-400 max-w-[35px] max-h-[35px]">
                 <img src="src/Placeholder_Person.jpg" alt="" class="rounded-full border-1 border-gray-400 max-w-[35px] max-h-[35px]">
@@ -143,32 +145,40 @@
             </svg>
         </div>
     </section>
-    
-    <section class="mx-4 mt-5 relative grid grid-cols-1 gap-2">
+    <!-- ABOUT PAGE-->
+    <section class="mx-4 mt-5 grid grid-cols-1 gap-2">
         <p class="text-[25px] text-black font-bold cascadia-code-regular ml-2 mb-[-0.5rem]">Dunia Farmakologi</p>
-        <div class="relative flex flex-col gap-[3px]">
-            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
-            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
+        <div class="relative flex flex-col gap-[4px] mb-3">
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-left"></div>
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-right" data-aos-delay="300"></div>
         </div>
+    </section>
+    <section class="mx-4 relative grid grid-cols-1 gap-2">
         <p class="text-[#555] ml-48 text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis debitis tempore reiciendis dolores eveniet ipsum, odio provident tempora velit vitae.</p>
         <p class="mx-8 text-justify"> Di jurusan ini, siswa dibekali pengetahuan tentang farmakologi, serta kimia farmasi. Selain teori, siswa juga diajarkan keterampilan dalam meracik, mengemas, dan menyimpan obat sesuai standar yang berlaku. Jurusan ini cocok untuk kamu yang tertarik di bidang kesehatan dan ingin berkontribusi dalam dunia pengobatan.</p>
-        <div class="flex flex-row place-items-center gap-3 mx-8">
+        <div class="flex flex-row place-items-center gap-3 mx-8" data-aos="fade-up">
             <p class="font-bold underline">Read More</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);" class="rounded-full bg-black border-1 border-gray-300 p-1">
                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
             </svg>
         </div>
         <!-- Quote Symbols -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-32 left-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-32 left-2" data-aos="fade-right">
             <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-87 left-70">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-87 left-70" data-aos="fade-left">
             <path d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"></path>
         </svg>    
     </section>
-
-    <section class="grid grid-cols-1 gap-6 mx-6 mt-20 md:grid-cols-4">
-        <p class="text-[30px] text-black font-bold">Skill yang Dipelajari</p>
+    <!-- SKILLS PAGE -->
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Skills</p>
+        <div class="relative flex flex-col gap-[4px] mb-3">
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-left"></div>
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-right" data-aos-delay="300"></div>
+        </div>
+    </section>
+    <section class="grid grid-cols-1 gap-8 mx-8 md:grid-cols-4">
         <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
             <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
                 <i class="fas fa-dna text-[2rem] text-[#00acc1]"></i> Farmakologi
@@ -212,12 +222,21 @@
             <p class="mt-4 z-1 text-[1rem] text-[#555] fadeIn-easeIn">Mengembangkan produk farmasi inovatif secara mandiri.</p>
         </div>
     </section>
-    <!-- Profesi -->
-    <section class="mx-6 grid grid-cols-1 gap-6 mt-10">
-        <div class="grid grid-cols-1 bg-purple-100 border-1 border-gray-500 p-2 rounded-2xl mx-8">
-            <p class="text-[20px] font-medium tracking-wide text-center font-semibold">Rasio Pemilihan Profesi</p>
-            <div></div>
-            <div class="grid grid-cols-2 gap-3 place-items-center">
+    <!-- PROFESSION PAGE -->
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Skills</p>
+        <div class="relative flex flex-col gap-[4px] mb-3">
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-left"></div>
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-right" data-aos-delay="300"></div>
+        </div>
+    </section>
+    <section class="mx-6 grid grid-cols-1 gap-6 mt-4">
+        <div class="grid grid-cols-1 bg-purple-100 border-1 border-gray-500 p-2 rounded-2xl place-items-center">
+            <div class="relative mx-4 mt-2 rounded-full bg-white max-h-[250px] max-w-[250px]">
+                <canvas id="donutChart"></canvas>
+                <p class="cascadia-code-regular rounded-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Rasio Pemilihan Profesi</p>
+            </div>
+            <div class="grid grid-cols-2 gap-y-4 gap-x-6 place-items-center my-4 mx-4">
                 <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
                     <p>Asisten Apoteker</p>
                     <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
@@ -316,6 +335,14 @@
                     <p class="underline text-[13px]">Learn More</p>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- PROGRAM PAGE -->
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Program</p>
+        <div class="relative flex flex-col gap-[4px] mb-3">
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-left"></div>
+            <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full" data-aos="fade-right" data-aos-delay="300"></div>
         </div>
     </section>
     <section class="mx-6">
@@ -458,8 +485,11 @@
                 </div>
             </div>
         </div>
-        </section>
+    </section>
+    <!-- NATIVE JS -->
     <script src="index.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
