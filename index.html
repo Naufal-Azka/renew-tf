@@ -106,6 +106,39 @@
                 0% { opacity: 0; transform: translateY(10px); }
                 100% { opacity: 1; transform: translateY(0); }
             }
+            .lightbox {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                z-index: 999;
+                padding: 1rem;
+            }
+
+            .lightbox.active {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .lightbox-img {
+                max-width: 90%;
+                max-height: 80vh;
+                object-fit: contain;
+            }
+
+            .close-lightbox {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+            }
         }
         @layer utilities{
             .home {
@@ -530,7 +563,7 @@
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="mx-6 grid grid-cols-2 gap-4">
+    <section class="mx-6 grid grid-cols-2 gap-4" id="gallery">
         <div class="overflow-hidden">
             <img src="src/data-dummy-photo-profile.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
         </div>
@@ -601,6 +634,11 @@
             </div>
         </div>
     </section>
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img src="" alt="" class="lightbox-img">
+    </div>
     <!-- NATIVE JS -->
     <script src="index.js"></script>
     <!-- AOS -->
