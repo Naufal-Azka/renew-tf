@@ -1,5 +1,7 @@
 const navbar = document.getElementById("navbar");
 const navbarItem = document.getElementById("navbar-item");
+let isNavOpen = false;
+
 
 // Function to make the navbar change backdrop filter when scrolled for certain offset
 const changeNavbarOnScroll = () => {
@@ -23,7 +25,21 @@ const changeNavbarOnScroll = () => {
 document.addEventListener("scroll", changeNavbarOnScroll);
 
 const navbarList = document.getElementById("navbar-list");
-let isNavOpen = false;
+
+// Function to handle navbarList visibility based on screen size
+const handleNavbarListVisibility = () => {
+    if (window.innerWidth <= 768) { // Small devices
+        navbarList.classList.add('navbar-list');
+    } else { // Larger devices
+        navbarList.classList.remove('navbar-list');
+        navbarList.classList.remove('active'); 
+        document.body.classList.remove('overflow-hidden'); 
+        isNavOpen = false;
+    }
+};
+handleNavbarListVisibility();
+
+window.addEventListener('resize', handleNavbarListVisibility);
 
 // Toggle navbar list
 navbarItem.addEventListener('click', () => {
@@ -44,6 +60,54 @@ document.addEventListener('click', (e) => {
         document.body.classList.remove('overflow-hidden');
         isNavOpen = false;
     }
+});
+
+// Function to handle active section highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function highlightNavigation() {
+    const scrollY = window.scrollY;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // Adjust offset as needed
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', highlightNavigation);
+
+// Add smooth scrolling for nav links
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            if (isNavOpen) {
+                navbarList.classList.remove('active');
+                document.body.classList.remove('overflow-hidden');
+                isNavOpen = false;
+            }
+        }
+    });
 });
 
 const data = {
