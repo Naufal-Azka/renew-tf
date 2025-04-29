@@ -144,6 +144,13 @@
                 transition: color 0.3s ease;
             }
 
+            .ease-color{
+                transition: color 0.3s ease;
+            }
+            .ease-bg-color{
+                transition: background-color 0.2s ease;
+            }
+
             .nav-link::after {
                 content: '';
                 position: absolute;
@@ -185,10 +192,10 @@
     </style>
 </head>
 <body class="special-gothic-regular scroll-smooth">
-    <nav class="backdrop-blur-base fixed bg-white z-2 w-full lg:flex lg:flex-row lg:justify-between lg:px-12 lg:py-1" id="navbar">
+    <nav class="fixed text-white z-2 w-full ease-bg-color lg:flex lg:flex-row lg:justify-between lg:px-12 lg:py-1 fadeInDown" id="navbar">
         <div class="border-gray-400 flex place-items-center justify-center py-2 gap-2 lg:justify-start lg:border-none" id="navbar-item">
             <img src="src/logo-tf.png" alt="" loading="lazy" class="w-1/10 rounded-full border-1 border-gray-400 lg:w-1/16">
-            <p class="cascadia-code-regular">Teknologi Farmasi</p>
+            <p class="cascadia-code-regular ease-color">Teknologi Farmasi</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1); " class="lg:hidden">
                 <path d="m11.998 17 7-8h-14z"></path>
             </svg>
@@ -218,7 +225,7 @@
         </div>
     </nav>
     <!-- LANDING PAGE -->
-    <section class="home w-full rounded-b-[24px] flex flex-col-reverse p-4 pb-10 gap-3" id="home">
+    <section class="home w-full rounded-b-[24px] flex flex-col-reverse p-4 pb-10 gap-3 lg:rounded-none" id="home">
         <div class="flex flex-row justify-center place-items-center gap-2 px-4 py-2 top-[90%] left-[3%] border-1 border-gray-300 bg-white rounded-full max-w-[10rem]">
             <p>Learn More</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);" class="rounded-full bg-white border-1 border-gray-300 p-1">
@@ -239,39 +246,39 @@
         </div>
     </section>
     <!-- ABOUT PAGE-->
-    <section class="mx-4 mt-5 grid grid-cols-1 gap-2" id="about">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-2 mb-[-0.5rem]">Dunia Farmakologi</p>
-        <div class="relative flex flex-col gap-[4px] mb-3">
+    <section class="mx-4 mt-5 grid grid-cols-1 gap-2 scroll-mt-15 lg:mx-8" id="about">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-2 mb-[-0.5rem] lg:ml-8 lg:mb-0">Dunia Farmakologi</p>
+        <div class="relative flex flex-col gap-1.5 mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="mx-4 relative grid grid-cols-1 gap-2">
-        <p class="text-[#555] ml-48 text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis debitis tempore reiciendis dolores eveniet ipsum, odio provident tempora velit vitae.</p>
-        <p class="mx-8 text-justify"> Di jurusan ini, siswa dibekali pengetahuan tentang farmakologi, serta kimia farmasi. Selain teori, siswa juga diajarkan keterampilan dalam meracik, mengemas, dan menyimpan obat sesuai standar yang berlaku. Jurusan ini cocok untuk kamu yang tertarik di bidang kesehatan dan ingin berkontribusi dalam dunia pengobatan.</p>
-        <div class="flex flex-row place-items-center gap-3 mx-8">
+    <section class="mx-4 relative grid grid-cols-1 gap-2 lg:gap-8">
+        <p class="text-[#555] ml-48 text-[12px] lg:ml-[60%] lg:mt-8 lg:text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis debitis tempore reiciendis dolores eveniet ipsum, odio provident tempora velit vitae.</p>
+        <p class="mx-8 text-justify lg:mx-24 text-[18px]"> Di jurusan ini, siswa dibekali pengetahuan tentang farmakologi, serta kimia farmasi. Selain teori, siswa juga diajarkan keterampilan dalam meracik, mengemas, dan menyimpan obat sesuai standar yang berlaku. Jurusan ini cocok untuk kamu yang tertarik di bidang kesehatan dan ingin berkontribusi dalam dunia pengobatan.</p>
+        <div class="flex flex-row place-items-center gap-3 mx-8 lg:mx-24">
             <p class="font-bold underline">Read More</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);" class="rounded-full bg-black border-1 border-gray-300 p-1">
                 <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path>
             </svg>
         </div>
         <!-- Quote Symbols -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-32 left-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-32 left-2 lg:top-17 lg:left-10">
             <path d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789zM20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.902 2.902 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2z"></path>
         </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-87 left-70">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 0.200);" class="absolute top-87 left-70 lg:left-214 lg:top-37">
             <path d="M20.309 17.708C22.196 15.66 22.006 13.03 22 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292zm-11.007 0C11.19 15.66 10.999 13.03 10.993 13V5a1 1 0 0 0-1-1h-6c-1.103 0-2 .897-2 2v7a1 1 0 0 0 1 1h3.078a2.89 2.89 0 0 1-.429 1.396c-.508.801-1.465 1.348-2.846 1.624l-.803.16V20h1c2.783 0 4.906-.771 6.309-2.292z"></path>
         </svg>    
     </section>
     <!-- SKILLS PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10" id="skills">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Skills</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 scroll-mt-15 lg:mx-8" id="skills">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Skills</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="grid grid-cols-1 gap-8 mx-8 md:grid-cols-4">
+    <section class="grid grid-cols-1 gap-8 mx-8 lg:grid-cols-4 lg:mx-12 lg:mt-4">
         <div class="bg-white p-6 rounded-[16px] shadow-[0_6px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease relative overflow-hidden cursor-pointer flex flex-col items-center text-center skill">
             <div class="text-[1.3rem] font-normal text-[#004d40] relative z-1 flex flex-col items-center gap-3 popIn-ease-forwards after:content-[''] after:w-[60px] after:h-[2px] after:bg-[#ccc] after:mt-3 after:rounded-[2px]">
                 <i class="fas fa-dna text-[2rem] text-[#00acc1]"></i> Farmakologi
@@ -316,51 +323,51 @@
         </div>
     </section>
     <!-- PROFESSION PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10" id="profession">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Skills</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 scroll-mt-15 lg:mx-8" id="profession">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Profesi</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="mx-6 grid grid-cols-1 gap-6 mt-4">
-        <div class="grid grid-cols-1 bg-purple-100 border-1 border-gray-500 p-2 rounded-2xl place-items-center">
+    <section class="mx-6 grid grid-cols-1 gap-6 mt-4 lg:grid-cols-2">
+        <div class="grid grid-cols-1 bg-purple-100 border-1 border-gray-500 p-2 rounded-3xl place-items-center lg:mx-18">
             <div class="relative mx-4 mt-2 rounded-full bg-white max-h-[250px] max-w-[250px]">
                 <canvas id="donutChart"></canvas>
                 <p class="cascadia-code-regular rounded-full absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Rasio Pemilihan Profesi</p>
             </div>
-            <div class="grid grid-cols-2 gap-y-4 gap-x-6 place-items-center my-4 mx-4">
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Asisten Apoteker</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+            <div class="grid grid-cols-2 gap-y-4 gap-x-6 my-4 mx-4">
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Asisten Apoteker</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Teknisi Laboratorium</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Teknisi Laboratorium</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Operator Produksi Farmasi</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Operator Produksi Farmasi</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Staff Quality Control</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Staff Quality Control</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Staff Gudang Obat</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Staff Gudang Obat</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Sales Produk Farmasi</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Sales Produk Farmasi</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-4">
-                    <p>Petugas Klinik</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-4">
+                    <p class="place self-center text-[13px]">Petugas Klinik</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
-                <div class="grid grid-cols-[auto_18px] place-items-center gap-1">
-                    <p>Melanjutkan Kuliah</p>
-                    <div class="min-h-[18px] min-w-[18px] bg-red-400 rounded"></div>
+                <div class="grid grid-cols-[auto_18px] gap-1">
+                    <p class="place self-center text-[13px]">Melanjutkan Kuliah</p>
+                    <div class="min-h-[18px] min-w-[18px] max-h-[18px] bg-red-400 rounded place self-center"></div>
                 </div>
             </div>
         </div>
@@ -431,174 +438,198 @@
         </div>
     </section>
     <!-- PROGRAM PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10" id="program">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Program</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 scroll-mt-15 lg:mx-8" id="program">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Program</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="grid grid-cols-1 gap-4">
-        <p class="text-center font-bold text-[18px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, totam!</p>
+    <section class="grid grid-cols-1 gap-4 lg:mt-10 lg:grid-cols-[30%_auto] lg:ml-[5%] lg:gap-8">
+        <div class="grid grid-cols-1">
+            <p class="text-center font-bold text-[18px] lg:text-[30px]">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, totam!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, culpa.</p>
+        </div>
         <div class="grid grid-cols-1 gap-6 ml-6">
-            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2">
+            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2 lg:place-items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);" class="bg-gray-300 rounded-full p-3">
                     <path d="M3.299 17.596c.432 1.332 1.745 2.182 3.146 2.182H6.5A2.78 2.78 0 0 0 9.223 22c.457 0 .884-.115 1.262-.313a.992.992 0 0 0 .515-.882V3.027a.997.997 0 0 0-.785-.983 2.324 2.324 0 0 0-1.479.201c-.744.356-1.18 1.151-1.18 1.978v.055a2.778 2.778 0 0 0-2.744 4.433A3.327 3.327 0 0 0 2 12c0 1.178.611 2.211 1.533 2.812-.43.771-.571 1.746-.234 2.784zm15.889-8.885a2.778 2.778 0 0 0-2.744-4.433v-.055c0-.826-.437-1.622-1.181-1.978a2.32 2.32 0 0 0-1.478-.201.998.998 0 0 0-.785.983v17.777c0 .365.192.712.516.882.378.199.804.314 1.261.314a2.78 2.78 0 0 0 2.723-2.223h.056c1.4 0 2.714-.85 3.146-2.182.337-1.038.196-2.013-.234-2.784A3.35 3.35 0 0 0 22 12a3.327 3.327 0 0 0-2.812-3.289z"></path>
                 </svg>
-                <div class="grid grid-cols-1 gap-1 rounded p-2">                
-                    <p class="cascadia-code-regular font-bold text-[14px]">Pendidikan Teknologi Farmasi</p>
-                    <p class="text-[12px]">Mempelajari obat-obatan serta manajemen dan pemasaran obat.</p>
+                <div class="grid grid-cols-1 gap-1 rounded p-2 lg:gap-0">                
+                    <p class="cascadia-code-regular font-bold text-[14px] lg:text-[20px]">Pendidikan Teknologi Farmasi</p>
+                    <p class="text-[12px] lg:text-[14px]">Mempelajari obat-obatan serta manajemen dan pemasaran obat.</p>
                 </div>
             </div>
-            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2">
+            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2 lg:place-items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);" class="bg-gray-300 rounded-full p-3">
                     <path d="M2 8v11.529S6.621 19.357 12 22c5.379-2.643 10-2.471 10-2.471V8s-5.454 0-10 2.471C7.454 8 2 8 2 8z"></path><circle cx="12" cy="5" r="3"></circle>
                 </svg>
-                <div class="grid grid-cols-1 gap-1 rounded p-2">
-                    <p class="cascadia-code-regular font-bold text-[14px]">Kurikulum Merdeka</p>
-                    <p class="text-[12px]">Pembelajaran intrakurikuler yang beragam dimana konten akan lebih optimal.</p>
+                <div class="grid grid-cols-1 gap-1 rounded p-2 lg:gap-0">
+                    <p class="cascadia-code-regular font-bold text-[14px] lg:text-[20px]">Kurikulum Merdeka</p>
+                    <p class="text-[12px] lg:text-[14px]">Pembelajaran intrakurikuler yang beragam dimana konten akan lebih optimal.</p>
                 </div>
             </div>
-            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2">
+            <div class="grid grid-cols-[25%_auto] place-items-center bg-[#a4bed5] rounded-l-full gap-2 lg:place-items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 22" style="fill: rgba(0, 0, 0, 1);" class="bg-gray-300 rounded-full p-3">
                     <path d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h4l-1.8 2.4 1.6 1.2 2.7-3.6h3l2.7 3.6 1.6-1.2L16 18h4c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 16V5h16l.001 11H4z"></path><path d="M6 12h4v2H6z"></path>
                 </svg>               
-                <div class="grid grid-cols-1 gap-1 rounded p-2">
-                    <p class="cascadia-code-regular font-bold text-[14px]">Bimbingan Terpantau</p>
-                    <p class="text-[12px]">Guru dan pembimbing terlatih yang memonitori siswa.</p>
+                <div class="grid grid-cols-1 gap-1 rounded p-2 lg:gap-0">
+                    <p class="cascadia-code-regular font-bold text-[14px] lg:text-[20px]">Bimbingan Terpantau</p>
+                    <p class="text-[12px] lg:text-[14px]">Guru dan pembimbing terlatih yang memonitori siswa.</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- ACHIEVEMENT PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 mb-4" id="achievement">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Prestasi</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 mb-4 scroll-mt-15 lg:mx-8" id="achievement">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Prestasi</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="grid grid-cols-1 mx-6 gap-8">
-        <div class="grid grid-cols-1 gap-2">
-            <img src="src/IMG-20240318-WA0006.jpg" alt="" class="rounded-2xl w-full h-[12rem] border-2 border-gray-500" loading="lazy">
-            <p class="text-[12px]">Lorem, ipsum.</p>
-            <p class="cascadia-code-regular font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="text-[12px]">Lorem, ipsum dolor.</p>
-            <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eveniet nostrum mollitia.</p>
-        </div>
-        <div class="grid grid-cols-1 gap-2">
-            <img src="src/IMG-20240318-WA0006.jpg" alt="" class="rounded-2xl w-full h-[12rem] border-2 border-gray-500" loading="lazy">
-            <p class="text-[12px]">Lorem, ipsum.</p>
-            <p class="cascadia-code-regular font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="text-[12px]">Lorem, ipsum dolor.</p>
-            <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eveniet nostrum mollitia.</p>
-        </div>
-        <div class="grid grid-cols-1 gap-2">
-            <img src="src/IMG-20240318-WA0006.jpg" alt="" class="rounded-2xl w-full h-[12rem] border-2 border-gray-500" loading="lazy">
-            <p class="text-[12px]">Lorem, ipsum.</p>
-            <p class="cascadia-code-regular font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p class="text-[12px]">Lorem, ipsum dolor.</p>
-            <p class="text-[14px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eveniet nostrum mollitia.</p>
+    <section class="grid grid-cols-1 mx-6 gap-8 lg:mx-10 ">     
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Featured Article -->
+            <div class="md:col-span-2 bg-gray-100 rounded-lg overflow-hidden">
+                <div class="h-64 bg-gray-200 flex items-center justify-center overflow-hidden">
+                    <img src="src/home.jpg" alt="" class="object-fit"/>
+                </div>
+                <div class="p-4">
+                    <p class="text-sm text-gray-500 mb-2">Prestasi Terkini</p>
+                    <p class="cascadia-code-regular text-lg font-semibold mb-2">Lorem ipsum dolor sit amet.</p>
+                    <p class="text-[12px] text-gray-500">Aug 15, 2022</p>
+                </div>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-gray-100 rounded-lg overflow-hidden flex">
+                    <div class="w-24 h-24 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="src/Placeholder_Person.jpg" alt="placeholder" class="object-cover" />
+                    </div>
+                    <div class="p-3 flex-1">
+                        <p class="cascadia-code-regular text-sm font-semibold mb-1">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="text-xs text-gray-500">Aug 12, 2022</p>
+                    </div>
+                </div> 
+                <div class="bg-gray-100 rounded-lg overflow-hidden flex">
+                    <div class="w-24 h-24 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="src/Placeholder_Person.jpg" alt="placeholder" class="object-cover"/>
+                    </div>
+                    <div class="p-3 flex-1">
+                        <p class="cascadia-code-regular text-sm font-semibold mb-1">Lorem ipsum dolor sit amet.</p>
+                        <p class="text-xs text-gray-500">Aug 10, 2022</p>
+                    </div>
+                </div>  
+                <div class="bg-gray-100 rounded-lg overflow-hidden flex">
+                    <div class="w-24 h-24 bg-gray-200 flex items-center justify-center overflow-hidden">
+                        <img src="src/Placeholder_Person.jpg" alt="placeholder" class="object-cover" />
+                    </div>
+                    <div class="p-3 flex-1">
+                        <p class="cascadia-code-regular text-sm font-semibold mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="text-xs text-gray-500">Aug 8, 2022</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- TEACHER PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10" id="teacher">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Guru</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 scroll-mt-15 lg:mx-8" id="teacher">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Guru</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="mx-6 grid grid-cols-1 gap-4">
-        <div class="flex flex-row place-items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden mt-5">
-            <div class="flex flex-col gap-1 px-2">
+    <section class="mx-6 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-x-8 lg:mx-10">
+        <div class="flex flex-row items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden mt-5 lg:grid lg:grid-cols-[auto_30%] ">
+            <div class="flex flex-col gap-1 mx-2 lg:mx-4">
                 <p class="text-[14px]">NAUFAL AZKA PUTRA DIFA</p>
                 <p class="text-[11px]">NIP: 00000000 000000 0 000</p>
-                <p class="text-[12px]">"Lorem ipsum dolor sit amet consectetur."</p>
-                <hr class="my-2">
+                <p class="text-[12px] italic my-2 lg:text-[16px]">"Lorem ipsum dolor sit amet consectetur."</p>
+                <hr class="my-2 lg:my-1">
                 <a href="" class="flex flex-row place-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
                         <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
                     </svg>
-                    <p class="underline">@naufal_azka74</p>
+                    <p class="underline lg:text-[14px]">@naufal_azka74</p>
                 </a>
             </div>
-            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-[130px]">
+            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-full">
         </div>
-        <div class="flex flex-row place-items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden">
-            <div class="flex flex-col gap-1 px-2">
+        <div class="flex flex-row items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden mt-5 lg:grid lg:grid-cols-[auto_30%]">
+            <div class="flex flex-col gap-1 mx-2 lg:mx-4">
                 <p class="text-[14px]">NAUFAL AZKA PUTRA DIFA</p>
                 <p class="text-[11px]">NIP: 00000000 000000 0 000</p>
-                <p class="text-[12px]">"Lorem ipsum dolor sit amet consectetur."</p>
-                <hr class="my-2">
+                <p class="text-[12px] italic my-2 lg:text-[16px]">"Lorem ipsum dolor sit amet consectetur."</p>
+                <hr class="my-2 lg:my-1">
                 <a href="" class="flex flex-row place-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
                         <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
                     </svg>
-                    <p class="underline">@naufal_azka74</p>
+                    <p class="underline lg:text-[14px]">@naufal_azka74</p>
                 </a>
             </div>
-            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-[130px]">
+            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-full">
         </div>
-        <div class="flex flex-row place-items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden">
-            <div class="flex flex-col gap-1 px-2">
+        <div class="flex flex-row items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden mt-5 lg:grid lg:grid-cols-[auto_30%]">
+            <div class="flex flex-col gap-1 mx-2 lg:mx-4">
                 <p class="text-[14px]">NAUFAL AZKA PUTRA DIFA</p>
                 <p class="text-[11px]">NIP: 00000000 000000 0 000</p>
-                <p class="text-[12px]">"Lorem ipsum dolor sit amet consectetur."</p>
-                <hr class="my-2">
+                <p class="text-[12px] italic my-2 lg:text-[16px]">"Lorem ipsum dolor sit amet consectetur."</p>
+                <hr class="my-2 lg:my-1">
                 <a href="" class="flex flex-row place-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
                         <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
                     </svg>
-                    <p class="underline">@naufal_azka74</p>
+                    <p class="underline lg:text-[14px]">@naufal_azka74</p>
                 </a>
             </div>
-            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-[130px]">
+            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-full">
         </div>
-        <div class="flex flex-row place-items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden">
-            <div class="flex flex-col gap-1 px-2">
+        <div class="flex flex-row items-center max-h-[200px] rounded-xl bg-white border-1 border-gray-300 overflow-hidden mt-5 lg:grid lg:grid-cols-[auto_30%]">
+            <div class="flex flex-col gap-1 mx-2 lg:mx-4">
                 <p class="text-[14px]">NAUFAL AZKA PUTRA DIFA</p>
                 <p class="text-[11px]">NIP: 00000000 000000 0 000</p>
-                <p class="text-[12px]">"Lorem ipsum dolor sit amet consectetur."</p>
-                <hr class="my-2">
+                <p class="text-[12px] italic my-2 lg:text-[16px]">"Lorem ipsum dolor sit amet consectetur."</p>
+                <hr class="my-2 lg:my-1">
                 <a href="" class="flex flex-row place-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
                         <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path>
                     </svg>
-                    <p class="underline">@naufal_azka74</p>
+                    <p class="underline lg:text-[14px]">@naufal_azka74</p>
                 </a>
             </div>
-            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-[130px]">
+            <img src="src/Placeholder_Person.jpg" alt="" loading="lazy" class="object-cover w-full">
         </div>
     </section>
     <!-- GALLERY PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 mb-4">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Galeri</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 mb-4 scroll-mt-15 lg:mx-8">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Galeri</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
         </div>
     </section>
-    <section class="mx-6 grid grid-cols-2 gap-4" id="gallery">
+    <section class="mx-6 grid grid-cols-2 gap-4 lg:grid-cols-4 lg:mx-10 lg:gap-6" id="gallery">
         <div class="overflow-hidden">
-            <img src="src/data-dummy-photo-profile.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
+            <img src="src/data-dummy-photo-profile.jpg" alt="" class="rounded-2xl lg:w-full lg:h-[15rem]" loading="lazy">
         </div>
         <div class="overflow-hidden">
-            <img src="src/IMG-20240318-WA0006.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
+            <img src="src/IMG-20240318-WA0006.jpg" alt="" class="rounded-2xl lg:w-full lg:h-[15rem]" loading="lazy">
         </div>
         <div class="overflow-hidden">
-            <img src="src/IMG-20240318-WA0014.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
+            <img src="src/IMG-20240318-WA0014.jpg" alt="" class="rounded-2xl lg:w-full lg:h-[15rem]" loading="lazy">
         </div>
         <div class="overflow-hidden">
-            <img src="src/IMG-20240422-WA0004.jpg" alt="" class="h-[10rem] w-[10rem]" loading="lazy">
+            <img src="src/IMG-20240422-WA0004.jpg" alt="" class="rounded-2xl lg:w-full lg:h-[15rem]" loading="lazy">
         </div>
         <div class="overflow-hidden col-span-2">
-            <img src="src/home.jpg" alt="" loading="lazy">
+            <img src="src/home.jpg" alt="" class="rounded-2xl lg:w-full lg:h-[15rem]" loading="lazy">
         </div>
     </section>
     <!-- TEAM PROFILE PAGE -->
-    <section class="grid grid-cols-1 gap-2 mx-6 mt-10">
-        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem]">Meet Our Team</p>
+    <section class="grid grid-cols-1 gap-2 mx-6 mt-10 lg:mx-8">
+        <p class="text-[25px] text-black font-bold cascadia-code-regular ml-4 mb-[-0.5rem] lg:ml-8 lg:mb-0">Meet Our Team</p>
         <div class="relative flex flex-col gap-[4px] mb-3">
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
             <div class="min-w-full min-h-1 bg-[#a4bed5] rounded-full"></div>
@@ -607,7 +638,7 @@
     <section class="mx-6 text-center">
         <p class="mt-4 mb-8">Kami adalah tim yang berdedikasi untuk menciptakan solusi terbaik di dunia farmasi.</p>
       
-        <div class="grid grid-cols-1 gap-7 md:grid-cols-5">
+        <div class="grid grid-cols-1 gap-7 md:grid-cols-5 lg:mx-4">
             <div class="bg-white rounded-[20px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] transition-transform-boxShadow-ease overflow-hidden cursor-pointer hover:shadow-[0_15px_30px_rgba(0,0,0,0.15)] hover:bg-[#e3f2fd] hover:transform hover:translate-y-[-10px]">
                 <img src="https://i.pravatar.cc/150?img=3" alt="Anggota 1" class="w-full h-[200px] object-cover border-b-2 border-[#0d47a1] transition-transform-boxShadow-ease hover:scale-[1.1]"/>
                 <div class="p-5 text-center">
