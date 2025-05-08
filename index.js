@@ -117,7 +117,8 @@ const data = {
             '#98FB98',  // Light green
             '#D8BFD8',  // Light purple
             '#ADD8E6',  // Light blue
-            '#FFDAB9'   // Peach
+            '#FFDAB9',
+            '#ff0000'   // Peach
         ],
         borderWidth: 0,
         cutout: '70%'  // This makes it a donut chart
