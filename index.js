@@ -10,6 +10,7 @@ const changeNavbarOnScroll = () => {
         navbar.classList.remove('text-white');
 
         navbar.classList.add('bg-white');
+        navbarList.classList.remove('lg:text-white')
         navbarItem.classList.add('border-b-2');
     } else {
         navbar.classList.remove('bg-white');
